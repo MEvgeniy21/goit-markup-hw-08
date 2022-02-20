@@ -1,0 +1,45 @@
+/* -------header CSS */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+/* логотип в header*/
+.header__logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 93px;
+  color: $title-text-color;
+}
+
+.header__list {
+  @extend %list;
+  @extend %header-list;
+  margin-left: auto;
+}
+
+.header__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.header__link {
+  @extend %link;
+  @extend %header-link;
+  display: flex;
+  align-items: center;
+  color: $general-text-color;
+  transition: color 250ms $primary-cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $activated-color;
+  }
+}
+
+.header__icon {
+  margin-right: 10px;
+  --color4: currentColor;
+}

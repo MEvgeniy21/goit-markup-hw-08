@@ -1,0 +1,43 @@
+/* фильтр */
+.portfolio__filtr {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.portfolio__btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: $title-text-color;
+  background-color: $secondary-bg-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: color 250ms $primary-cubic-bezier, background-color 250ms $primary-cubic-bezier,
+    box-shadow 250ms $primary-cubic-bezier;
+  &--active {
+    color: $primary-color;
+    background-color: $activated-color;
+  }
+  &:hover,
+  &:focus {
+    color: $primary-color;
+    background-color: $activated-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}

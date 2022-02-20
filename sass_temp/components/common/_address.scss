@@ -1,0 +1,26 @@
+/* контакты в footer */
+.address {
+  width: 231px;
+  font-style: inherit;
+}
+
+.address__list {
+  @extend %list;
+}
+
+.address__item:not(:first-child) {
+  margin-top: 9px;
+}
+
+.address__link {
+  @extend %link;
+  color: $contact-text-color;
+  transition: color 250ms $primary-cubic-bezier;
+  &--address {
+    color: inherit;
+  }
+  &:hover,
+  &:focus {
+    color: $activated-color;
+  }
+}

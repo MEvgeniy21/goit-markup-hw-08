@@ -1,0 +1,24 @@
+/* Общие свойства кнопок */
+.btn {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $primary-color;
+  background-color: $activated-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms $primary-cubic-bezier;
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+}

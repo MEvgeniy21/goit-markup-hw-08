@@ -1,0 +1,23 @@
+/* Список соц.сетей */
+.social-list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+
+.social-list__item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.social-list__icon {
+  --color3: currentColor;
+}
+
+.social-list__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}

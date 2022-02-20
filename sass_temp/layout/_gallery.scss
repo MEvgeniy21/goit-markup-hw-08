@@ -1,0 +1,38 @@
+/* секция галлерея */
+.gallery {
+  padding-top: 0;
+}
+
+.gallery__title {
+  margin-bottom: 50px;
+}
+
+.gallery__list {
+  @extend %list;
+  display: flex;
+}
+
+.gallery__item {
+  position: relative;
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.gallery__img {
+  @extend %img;
+}
+
+.gallery__text {
+  @extend %font-uppercase;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  color: $primary-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}
