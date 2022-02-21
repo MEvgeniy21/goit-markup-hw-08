@@ -1,10 +1,6 @@
 /* общие свойства логотипа */
 .logo {
-  @extend %link;
-  font-family: $font-secondary;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.17;
+  @include font($font-secondary, 700, 24px, 28px, null);
 }
 
 .logo--begin {

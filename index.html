@@ -36,9 +36,9 @@
           aria-controls="menu-container"
           data-menu-button
         >
-          <svg width="40" height="40">
-            <use class="header__icon-close" href="./images/icons.svg#icon-close_40px"></use>
-            <use class="header__icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
+          <svg class="header__icon-btn" width="40" height="40">
+            <use class="header__icon-btn--close" href="./images/icons.svg#icon-close_40px"></use>
+            <use class="header__icon-btn--menu" href="./images/icons.svg#icon-menu_40px"></use>
           </svg>
         </button>
         <div class="header__menu" id="menu-container" data-menu>
@@ -56,29 +56,68 @@
               </li>
             </ul>
           </nav>
-          <!-- Контакты в шапке -->
-          <ul class="header__list">
-            <li class="header__item">
-              <a
-                class="header__link"
-                href="mailto:info@devstudio.com"
-                aria-label="Электронная почта"
-              >
-                <svg class="header__icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="tel:+380961111111" aria-label="Телефон">
-                <svg class="header__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-telefon"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+          <div class="header__wrap">
+            <ul class="header__list">
+              <li class="header__item">
+                <a
+                  class="header__link"
+                  href="mailto:info@devstudio.com"
+                  aria-label="Электронная почта"
+                >
+                  <svg class="header__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="tel:+380961111111" aria-label="Телефон">
+                  <svg class="header__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-telefon"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://ru.linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -198,6 +237,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Инстаграм"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -206,7 +247,13 @@
                     </a>
                   </li>
                   <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/" aria-label="Твиттер">
+                    <a
+                      class="social-list__link"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
+                      aria-label="Твиттер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
@@ -216,6 +263,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Фейсбук"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -227,6 +276,8 @@
                     <a
                       class="social-list__link"
                       href="https://ru.linkedin.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Линкедин"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -247,6 +298,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Инстаграм"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -255,7 +308,13 @@
                     </a>
                   </li>
                   <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/" aria-label="Твиттер">
+                    <a
+                      class="social-list__link"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
+                      aria-label="Твиттер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
@@ -265,6 +324,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Фейсбук"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -276,6 +337,8 @@
                     <a
                       class="social-list__link"
                       href="https://ru.linkedin.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Линкедин"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -301,6 +364,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Инстаграм"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -309,7 +374,13 @@
                     </a>
                   </li>
                   <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/" aria-label="Твиттер">
+                    <a
+                      class="social-list__link"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
+                      aria-label="Твиттер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
@@ -319,6 +390,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Фейсбук"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -330,6 +403,8 @@
                     <a
                       class="social-list__link"
                       href="https://ru.linkedin.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Линкедин"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -355,6 +430,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Инстаграм"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -363,7 +440,13 @@
                     </a>
                   </li>
                   <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/" aria-label="Твиттер">
+                    <a
+                      class="social-list__link"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
+                      aria-label="Твиттер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
@@ -373,6 +456,8 @@
                     <a
                       class="social-list__link"
                       href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Фейсбук"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -384,6 +469,8 @@
                     <a
                       class="social-list__link"
                       href="https://ru.linkedin.com/"
+                      target="_blank"
+                      rel="noreferrer noopener nofollow"
                       aria-label="Линкедин"
                     >
                       <svg class="social-list__icon" width="20" height="20">
@@ -480,28 +567,52 @@
           <p class="footer__title">Присоединяйтесь</p>
           <ul class="social-list">
             <li class="social-list__item">
-              <a class="social-list__link" href="https://www.instagram.com/" aria-label="Инстаграм">
+              <a
+                class="social-list__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label="Инстаграм"
+              >
                 <svg class="social-list__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link" href="https://twitter.com/" aria-label="Твиттер">
+              <a
+                class="social-list__link"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label="Твиттер"
+              >
                 <svg class="social-list__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link" href="https://www.facebook.com/" aria-label="Фейсбук">
+              <a
+                class="social-list__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label="Фейсбук"
+              >
                 <svg class="social-list__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link" href="https://ru.linkedin.com/" aria-label="Линкедин">
+              <a
+                class="social-list__link"
+                href="https://ru.linkedin.com/"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label="Линкедин"
+              >
                 <svg class="social-list__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
