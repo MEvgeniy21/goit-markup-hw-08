@@ -1,0 +1,94 @@
+/* -------header CSS */
+.header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+}
+
+// .header__container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+.header__menu {
+  position: absolute;
+  // top: 30px;
+  // right: 35px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+  transform-origin: top right;
+  // transform: scale(0) translate(0, 0);
+  transform: translateY(-100%);
+
+  transition: transform 500ms $primary-cubic-bezier;
+  &.is-open {
+    transform: translateY(0);
+    // transform: scale(1) translate(35px, -30px);
+  }
+}
+
+.header__icon-close {
+  opacity: 0;
+  transition: opacity 250ms $primary-cubic-bezier;
+}
+
+.header__icon-menu {
+  transition: opacity 250ms $primary-cubic-bezier;
+}
+
+.header__btn-menu {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 2;
+  @include flex-center(flex);
+
+  border: none;
+  background-color: transparent;
+  &.is-open {
+    .header__icon-close {
+      opacity: 1;
+    }
+    .header__icon-menu {
+      opacity: 0;
+    }
+  }
+}
+
+/* логотип в header*/
+.header__logo {
+  @include padding-link(16px, inline-block);
+  color: $title-text-color;
+}
+
+// .header__list {
+//   @extend %list;
+//   @extend %header-list;
+//   margin-left: auto;
+// }
+
+// .header__item:not(:first-child) {
+//   margin-left: 50px;
+// }
+
+// .header__link {
+//   @extend %link;
+//   @extend %header-link;
+//   display: flex;
+//   align-items: center;
+//   color: $general-text-color;
+//   transition: color 250ms $primary-cubic-bezier;
+//   &:hover,
+//   &:focus {
+//     color: $activated-color;
+//   }
+// }
+
+// .header__icon {
+//   margin-right: 10px;
+//   --color4: currentColor;
+// }

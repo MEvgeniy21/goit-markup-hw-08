@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-07 - Студия</title>
+    <title>goit-markup-hw-08 - Студия</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,39 +28,58 @@
         <a class="logo header__logo" href="./index.html"
           ><span class="logo--begin">Web</span>Studio</a
         >
-        <!-- Навигация на другие страницы -->
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--active" href="./index.html">Студия</a>
+        <button
+          class="header__btn-menu"
+          type="button"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40">
+            <use class="header__icon-close" href="./images/icons.svg#icon-close_40px"></use>
+            <use class="header__icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+        <div class="header__menu" id="menu-container" data-menu>
+          <!-- Навигация на другие страницы -->
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--active" href="./index.html">Студия</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Контакты в шапке -->
+          <ul class="header__list">
+            <li class="header__item">
+              <a
+                class="header__link"
+                href="mailto:info@devstudio.com"
+                aria-label="Электронная почта"
+              >
+                <svg class="header__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="">Контакты</a>
+            <li class="header__item">
+              <a class="header__link" href="tel:+380961111111" aria-label="Телефон">
+                <svg class="header__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-telefon"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <!-- Контакты в шапке -->
-        <ul class="header__list">
-          <li class="header__item">
-            <a class="header__link" href="mailto:info@devstudio.com" aria-label="Электронная почта">
-              <svg class="header__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="tel:+380961111111" aria-label="Телефон">
-              <svg class="header__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-telefon"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <!-- Уникальный контент страницы -->
@@ -586,7 +605,7 @@
         </form>
       </div>
     </div>
-
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

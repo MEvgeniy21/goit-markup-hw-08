@@ -1,0 +1,11 @@
+@mixin padding-link($p, $b: block) {
+  display: $b;
+  padding-top: $p;
+  padding-bottom: $p;
+}
+
+@mixin flex-center($f) {
+  display: $f;
+  align-items: center;
+  justify-content: center;
+}
