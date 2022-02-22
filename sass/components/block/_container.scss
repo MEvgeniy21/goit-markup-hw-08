@@ -1,8 +1,17 @@
 .container {
+  max-width: $mobile;
   min-width: $min-width;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid tomato;
+
+  @include min-media($tablet) {
+    max-width: $tablet;
+  }
+
+  @include min-media($desktop) {
+    max-width: $desktop;
+  }
 }

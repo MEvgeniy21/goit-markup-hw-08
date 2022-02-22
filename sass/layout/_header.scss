@@ -1,15 +1,16 @@
 /* -------header CSS */
 .header {
-  position: relative;
+  // position: relative;
   min-width: $min-width;
   border-bottom: 1px solid #ececec;
 }
 
-// .header__container {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
+.header__container {
+  position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+}
 
 .header__menu {
   position: absolute;
