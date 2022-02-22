@@ -91,6 +91,7 @@
   &:last-child {
     @include font(null, 500, 34px, 40px, 0.02em);
     margin-bottom: 32px;
+    color: $activated-color;
   }
 }
 // .header__item:not(:first-child) {

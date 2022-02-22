@@ -2,7 +2,6 @@
 /* общие свойства списков */
 /* Общие свойства для ссылок */
 /* Общие свойства изображений */
-/* Общий шрифт uppercase */
 /* общие свойства списков в шапке */
 /* общие свойства ссылок в шапке */
 /* сброс марджинов и паддингов */
@@ -71,6 +70,12 @@ button {
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid tomato;
+}
+
+/* общие падинги для секций */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* общие свойства логотипа */
@@ -156,6 +161,15 @@ button {
 
 .btn:hover, .btn:focus {
   background-color: #188ce8;
+}
+
+/* Общий шрифт uppercase */
+.font-uppercase {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14286;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* -------header CSS */
@@ -256,6 +270,7 @@ button {
   line-height: 1.17647;
   letter-spacing: 0.02em;
   margin-bottom: 32px;
+  color: #2196f3;
 }
 
 .header__link {
@@ -308,5 +323,30 @@ button {
 .hero__btn {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Секция преимуществ */
+.advantage__list {
+  list-style: none;
+}
+
+.advantage__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.advantage__title {
+  margin-bottom: 10px;
+  color: #212121;
+  text-align: center;
+}
+
+.advantage__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=main.css.map */

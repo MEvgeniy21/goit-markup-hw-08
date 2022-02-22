@@ -15,14 +15,6 @@
 //   height: auto;
 // }
 
-/* Общий шрифт uppercase */
-%font-uppercase {
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
 /* общие свойства списков в шапке */
 %header-list {
   display: flex;
