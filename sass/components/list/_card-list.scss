@@ -1,0 +1,60 @@
+.card-list {
+  @include list();
+  //   display: flex;
+  //   margin-left: -30px;
+}
+
+.card-list__item {
+  //   margin-left: 30px;
+  max-width: 450px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $primary-color;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include max-media($tablet) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include min-media($tablet) {
+    max-width: 354px;
+  }
+
+  @include min-media($desktop) {
+    max-width: 270px;
+  }
+}
+
+// .card-list__img {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.card-list__title {
+  @include font(null, 500, 16px, 19px, null);
+  margin-bottom: 10px;
+  color: $title-text-color;
+}
+
+.card-list__content {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  //   padding-bottom: 30px;
+  //   padding-left: 32px;
+  //   padding-right: 32px;
+}
+
+.card-list__text {
+  @include font(null, null, 16px, 19px, null);
+  margin-bottom: 16px;
+}
+
+.card-list .social-list {
+  margin-left: auto;
+  margin-right: auto;
+}

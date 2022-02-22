@@ -133,7 +133,7 @@
       <!-- Секция преимуществ -->
       <section class="section advantage">
         <div class="container">
-          <h2 class="visually-hidden">Преимущества</h2>
+          <h2 class="font-title visually-hidden">Преимущества</h2>
           <ul class="advantage__list">
             <li class="advantage__item">
               <div class="advantage__box" aria-label="Рисунок антенны">
@@ -185,7 +185,7 @@
       <!-- Секция изображений о специализации -->
       <section class="section gallery">
         <div class="container">
-          <h2 class="title gallery__title">Чем мы занимаемся</h2>
+          <h2 class="font-title gallery__title">Чем мы занимаемся</h2>
           <ul class="gallery__list">
             <li class="gallery__item">
               <img
@@ -220,14 +220,22 @@
       <!-- Секция наша команда -->
       <section class="section team">
         <div class="container">
-          <h2 class="title team__title">Наша команда</h2>
+          <h2 class="font-title team__title">Наша команда</h2>
           <ul class="card-list">
             <li class="card-list__item">
               <img
                 class="card-list__img"
-                src="./images/igor.jpg"
+                srcset="
+                  ./images/team/igor-450.jpg    450w,
+                  ./images/team/igor-450@2x.jpg 900w,
+                  ./images/team/igor-354.jpg    354w,
+                  ./images/team/igor-354@2x.jpg 708w,
+                  ./images/team/igor-270.jpg    270w,
+                  ./images/team/igor-270@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 450px) 450px, 100vw"
+                src="./images/team/igor-450.jpg"
                 alt="Игорь Демьяненко"
-                width="270"
               />
               <div class="card-list__content">
                 <h3 class="card-list__title">Игорь Демьяненко</h3>
@@ -289,7 +297,12 @@
               </div>
             </li>
             <li class="card-list__item">
-              <img class="card-list__img" src="./images/olga.jpg" alt="Ольга Репина" width="270" />
+              <img class="card-list__img" srcset=" ./images/team/olga-450.jpg 450w,
+              ./images/team/olga-450@2x.jpg 900w, ./images/team/olga-354.jpg 354w,
+              ./images/team/olga-354@2x.jpg 708w, ./images/team/olga-270.jpg 270w,
+              ./images/team/olga-270@2x.jpg 540w " sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width: 450px) 450px, 100vw" src="./images/team/olga-450.jpg
+              alt="Ольга Репина" />
               <div class="card-list__content">
                 <h3 class="card-list__title">Ольга Репина</h3>
                 <p class="card-list__text" lang="en">Frontend Developer</p>
@@ -350,12 +363,12 @@
               </div>
             </li>
             <li class="card-list__item">
-              <img
-                class="card-list__img"
-                src="./images/nikolay.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <img class="card-list__img" srcset=" ./images/team/nikolay-450.jpg 450w,
+              ./images/team/nikolay-450@2x.jpg 900w, ./images/team/nikolay-354.jpg 354w,
+              ./images/team/nikolay-354@2x.jpg 708w, ./images/team/nikolay-270.jpg 270w,
+              ./images/team/nikolay-270@2x.jpg 540w " sizes="(min-width: 1200px) 270px, (min-width:
+              768px) 354px, (min-width: 450px) 450px, 100vw" src="./images/team/nikolay-450.jpg
+              alt="Николай Тарасов" />
               <div class="card-list__content">
                 <h3 class="card-list__title">Николай Тарасов</h3>
                 <p class="card-list__text" lang="en">Marketing</p>
@@ -418,9 +431,17 @@
             <li class="card-list__item">
               <img
                 class="card-list__img"
-                src="./images/mihail.jpg"
+                srcset="
+                  ./images/team/mihail-450.jpg    450w,
+                  ./images/team/mihail-450@2x.jpg 900w,
+                  ./images/team/mihail-354.jpg    354w,
+                  ./images/team/mihail-354@2x.jpg 708w,
+                  ./images/team/mihail-270.jpg    270w,
+                  ./images/team/mihail-270@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 450px) 450px, 100vw"
+                src="./images/team/mihail-450.jpg"
                 alt="Михаил Ермаков"
-                width="270"
               />
               <div class="card-list__content">
                 <h3 class="card-list__title">Михаил Ермаков</h3>
@@ -486,7 +507,7 @@
       </section>
       <section class="section client">
         <div class="container">
-          <h2 class="title client__title">Постоянные клиенты</h2>
+          <h2 class="font-title client__title">Постоянные клиенты</h2>
           <ul class="client__list">
             <li class="client__item">
               <a href="" class="client__link" aria-label="Клиент 1">

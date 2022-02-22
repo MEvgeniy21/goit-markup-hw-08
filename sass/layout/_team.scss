@@ -1,13 +1,12 @@
 /* секция наша команда */
 .team {
-  font-size: 16px;
-  line-height: 1.19;
   text-align: center;
   background-color: $secondary-bg-color;
 }
 
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  // margin-bottom: 50px;
 }
 
 .team .social-list__link {

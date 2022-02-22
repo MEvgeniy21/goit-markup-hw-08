@@ -20,7 +20,11 @@
   font-family: $ff;
   font-weight: $fw;
   font-size: $fs;
-  line-height: ($lh / $fs);
+  @if ($fs == inherit) or ($fs == null) or ($lh == inherit) or ($lh == null) {
+    line-height: $lh;
+  } @else {
+    line-height: ($lh / $fs);
+  }
   letter-spacing: $ls;
 }
 
@@ -31,7 +35,7 @@
 }
 
 @mixin max-media($size) {
-  @media screen and (max-width: $size) {
+  @media screen and (max-width: ($size - 1px)) {
     @content;
   }
 }

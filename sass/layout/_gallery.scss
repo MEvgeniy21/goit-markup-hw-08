@@ -1,5 +1,5 @@
 /* секция галлерея */
-@include max-media($desktop - 1px) {
+@include max-media($desktop) {
   .gallery {
     display: none;
   }

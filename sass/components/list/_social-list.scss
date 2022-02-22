@@ -1,34 +1,23 @@
 /* Список соц.сетей */
 .social-list {
   @include list(flex);
-  flex-wrap: wrap;
-  // justify-content: center;
+  justify-content: center;
 }
 
 .social-list__item {
   &:not(:first-child) {
-    //   margin-left: 10px;
-    padding-left: 10px;
-  }
-
-  &:not(:last-child) {
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-left: 10px;
   }
 }
 
-// .social-list__icon {
-//   --color3: currentColor;
-// }
+.social-list__icon {
+  --color3: currentColor;
+}
 
 .social-list__link {
-  @include font(null, 500, 18px, 22px, 0.02em);
-  @include link(null, inline-block);
-  color: $activated-color;
-  //   display: flex;
-  //   width: 44px;
-  //   height: 44px;
-  //   justify-content: center;
-  //   align-items: center;
-  //   border-radius: 50%;
+  @include link(null, null);
+  @include flex-position();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
