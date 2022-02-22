@@ -134,6 +134,30 @@ button {
   color: #2196f3;
 }
 
+/* Общие свойства кнопок */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover, .btn:focus {
+  background-color: #188ce8;
+}
+
 /* -------header CSS */
 .header {
   position: relative;
@@ -247,5 +271,42 @@ button {
 
 .header__icon {
   display: none;
+}
+
+/* секция герой */
+.hero {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-480.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-480@2x.jpg);
+  }
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  padding: 0 45px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61538;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero__btn {
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=main.css.map */
