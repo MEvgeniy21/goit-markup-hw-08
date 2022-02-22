@@ -23,3 +23,15 @@
   line-height: ($lh / $fs);
   letter-spacing: $ls;
 }
+
+@mixin min-media($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin max-media($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
