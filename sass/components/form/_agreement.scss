@@ -8,8 +8,12 @@
 .agreement__check {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 0;
   transform: translateY(-50%);
+
+  @include min-media($desktop) {
+    left: 12px;
+  }
 }
 
 .agreement__icon {
@@ -44,9 +48,16 @@
 
 .agreement__text {
   display: block;
-  margin-left: 40px;
+  margin-left: 24px;
+  @include font(12px, 14px);
+
+  @include min-media($desktop) {
+    @include font(14px, 24px);
+    margin-left: 40px;
+  }
 }
 
 .agreement__link {
+  @include font(inherit, inherit);
   color: $activated-color;
 }

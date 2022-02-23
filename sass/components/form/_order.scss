@@ -1,9 +1,7 @@
 .order__label {
   display: block;
   margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(12px, 14px, 0.01em);
 }
 
 .order__wrap {
@@ -20,6 +18,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms $primary-cubic-bezier;
+
   &:hover,
   &:focus {
     border-color: $activated-color;
@@ -33,6 +32,7 @@
   transform: translateY(-50%);
   fill: currentColor;
   transition: color 250ms $primary-cubic-bezier;
+
   .order__input:hover + &,
   .order__input:focus + & {
     color: $activated-color;
@@ -48,10 +48,9 @@
   padding-left: 16px;
   padding-right: 16px;
   resize: none;
+
   &::placeholder {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
+    @include font(14px, 16px, 0.01em);
     color: rgba(117, 117, 117, 0.5);
   }
 }
