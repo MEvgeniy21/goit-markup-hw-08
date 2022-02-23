@@ -1,5 +1,5 @@
 /* Общий шрифт uppercase */
 .font-uppercase {
-  @include font(null, 700, 14px, 16px, 0.03em);
+  @include font(14px, 16px, 0.03em, 700);
   text-transform: uppercase;
 }

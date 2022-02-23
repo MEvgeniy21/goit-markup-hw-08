@@ -1,6 +1,6 @@
 /* общие свойства логотипа */
 .logo {
-  @include font($font-secondary, 700, 24px, 28px, null);
+  @include font(24px, 28px, null, 700, $font-secondary);
 }
 
 .logo--begin {

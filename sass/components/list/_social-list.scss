@@ -1,7 +1,6 @@
 /* Список соц.сетей */
 .social-list {
   @include list(flex);
-  justify-content: center;
 }
 
 .social-list__item {
@@ -15,7 +14,7 @@
 }
 
 .social-list__link {
-  @include link(null, null);
+  @include link(null);
   @include flex-position();
   width: 44px;
   height: 44px;

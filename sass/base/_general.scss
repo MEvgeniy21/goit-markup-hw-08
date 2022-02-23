@@ -1,6 +1,6 @@
 /* Общий CSS - начало */
 body {
-  @include font($font-primary, 400, 14px, 24px, 0.03em);
+  @include font(14px, 24px, 0.03em, 400, $font-primary);
   color: $general-text-color;
   background-color: $primary-color;
 

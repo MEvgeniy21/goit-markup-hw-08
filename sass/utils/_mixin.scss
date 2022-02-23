@@ -1,4 +1,4 @@
-@mixin link($p: null, $b: block, $td: none) {
+@mixin link($b: block, $p: null, $td: none) {
   display: $b;
   padding-top: $p;
   padding-bottom: $p;
@@ -16,9 +16,7 @@
   justify-content: $jc;
 }
 
-@mixin font($ff: inherit, $fw: inherit, $fs: inherit, $lh: inherit, $ls: inherit) {
-  font-family: $ff;
-  font-weight: $fw;
+@mixin font($fs: null, $lh: null, $ls: null, $fw: null, $ff: null) {
   font-size: $fs;
   @if ($fs == inherit) or ($fs == null) or ($lh == inherit) or ($lh == null) {
     line-height: $lh;
@@ -26,6 +24,8 @@
     line-height: ($lh / $fs);
   }
   letter-spacing: $ls;
+  font-weight: $fw;
+  font-family: $ff;
 }
 
 @mixin min-media($size) {

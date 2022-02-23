@@ -1,5 +1,5 @@
 // .navigation {
-//   @include font(null, 500, 40px, 47px, 0.02em);
+//   @include font(40px, 47px, 0.02em, 500);
 // }
 
 .navigation__list {
@@ -18,8 +18,8 @@
 // }
 
 .navigation__link {
-  @include font(null, 500, 40px, 47px, 0.02em);
-  @include link(null, inline-block);
+  @include font(40px, 47px, 0.02em, 500);
+  @include link(inline-block);
   //   @extend %header-link;
   //   position: relative;
   color: $title-text-color;

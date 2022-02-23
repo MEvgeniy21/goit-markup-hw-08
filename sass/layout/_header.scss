@@ -35,7 +35,6 @@
 
   & .social-list {
     flex-wrap: wrap;
-    justify-content: left;
   }
 
   & .social-list__item {
@@ -49,7 +48,7 @@
     width: auto;
     height: auto;
     border-radius: 0;
-    @include font(null, 500, 18px, 22px, 0.02em);
+    @include font(18px, 22px, 0.02em, 500);
     color: $activated-color;
   }
 }
@@ -94,7 +93,7 @@
 
 /* логотип в header*/
 .header__logo {
-  @include link(16px, inline-block);
+  @include link(inline-block, 16px);
   color: $title-text-color;
 }
 
@@ -107,10 +106,10 @@
 }
 
 .header__item {
-  @include font(null, 500, 24px, 28px, 0.02em);
+  @include font(24px, 28px, 0.02em, 500);
 
   &:last-child {
-    @include font(null, 500, 34px, 40px, 0.02em);
+    @include font(34px, 40px, 0.02em, 500);
     margin-bottom: 32px;
     color: $activated-color;
   }
@@ -120,8 +119,8 @@
 // }
 
 .header__link {
-  // @include font(null, 500, 40px, 47px, 0.02em);
-  @include link(null, inline-block);
+  // @include font(40px, 47px, 0.02em, 500);
+  @include link(inline-block);
   color: inherit;
   //   @extend %header-link;
   //   display: flex;

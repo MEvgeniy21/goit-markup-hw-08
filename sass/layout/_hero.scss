@@ -31,7 +31,7 @@
   // margin-right: auto;
   margin-bottom: 30px;
   padding: 0 45px;
-  @include font(null, 900, 26px, 42px, 0.06em);
+  @include font(26px, 42px, 0.06em, 900);
   //   font-size: 44px;
   text-transform: uppercase;
   color: $primary-color;
