@@ -28,14 +28,20 @@
   font-family: $ff;
 }
 
-@mixin min-media($size) {
-  @media screen and (min-width: $size) {
+@mixin min-media($min) {
+  @media screen and (min-width: $min) {
     @content;
   }
 }
 
-@mixin max-media($size) {
-  @media screen and (max-width: ($size - 1px)) {
+@mixin max-media($max) {
+  @media screen and (max-width: ($max - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-span($min, $max) {
+  @media screen and (min-width: $min) and (max-width: ($max - 1px)) {
     @content;
   }
 }
