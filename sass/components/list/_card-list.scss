@@ -2,6 +2,11 @@
   @include list();
   //   display: flex;
   //   margin-left: -30px;
+  @include min-media($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .card-list__item {
@@ -12,17 +17,15 @@
   border-radius: 0px 0px 4px 4px;
   background-color: $primary-color;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @include max-media($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
-
-  // @include max-media($tablet) {
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
 
   @include min-media($tablet) {
     max-width: 354px;
+    margin: 15px;
   }
 
   @include min-media($desktop) {
