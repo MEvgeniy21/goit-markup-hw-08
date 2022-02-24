@@ -1,13 +1,10 @@
 /* секция герой */
 .hero {
   max-width: 480px;
-  // max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  //   padding-top: 200px;
-  //   padding-bottom: 200px;
 
   background-color: $hero-bg-color;
   background-image: linear-gradient($hero-overlay-color, $hero-overlay-color),
@@ -33,18 +30,34 @@
         url(../images/hero/hero-768@2x.jpg);
     }
   }
+
+  @include min-media($desktop) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient($hero-overlay-color, $hero-overlay-color),
+      url(../images/hero/hero-1600.jpg);
+
+    @include retina() {
+      background-image: linear-gradient($hero-overlay-color, $hero-overlay-color),
+        url(../images/hero/hero-1600@2x.jpg);
+    }
+  }
 }
 
 .hero__title {
   max-width: 360px;
-  //   width: 696px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
   @include font(26px, 42px, 0.06em, 900);
-  //   font-size: 44px;
   text-transform: uppercase;
   color: $primary-color;
+
+  @include min-media($desktop) {
+    max-width: 696px;
+    @include font(44px, 60px);
+  }
 }
 
 .hero__btn {
