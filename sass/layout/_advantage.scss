@@ -1,8 +1,7 @@
 /* Секция преимуществ */
 .advantage__list {
   @include list();
-  //   display: flex;
-  //   margin-left: -30px;
+
   @include min-media($tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -11,8 +10,6 @@
 }
 
 .advantage__item {
-  //   flex-basis: calc(100% / 4 - 30px);
-  //   margin-left: 30px;
   @include max-media($tablet) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -22,6 +19,10 @@
   @include min-media($tablet) {
     width: 354px;
     margin: 15px;
+  }
+
+  @include min-media($desktop) {
+    width: 270px;
   }
 }
 
