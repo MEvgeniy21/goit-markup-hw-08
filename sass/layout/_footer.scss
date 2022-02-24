@@ -12,8 +12,22 @@
 //   align-items: baseline;
 // }
 
-.footer__info {
+.footer__box {
   margin-bottom: 60px;
+
+  @include min-media($tablet) {
+    @include flex-position(flex, baseline, space-between);
+  }
+}
+
+.footer__info {
+  @include max-media($tablet) {
+    margin-bottom: 60px;
+  }
+
+  @include min-media($tablet) {
+    width: 50%;
+  }
 }
 
 .footer__logo {
@@ -23,7 +37,9 @@
 }
 
 .footer__social {
-  margin-bottom: 60px;
+  @include min-media($tablet) {
+    width: 50%;
+  }
   // margin-left: 70px;
 }
 

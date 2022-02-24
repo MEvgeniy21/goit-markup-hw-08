@@ -21,6 +21,10 @@
   width: 100%;
   @include flex-position(flex, null, space-between);
 
+  &.is-open {
+    overflow: auto;
+  }
+
   @include max-media($tablet) {
     position: fixed;
     top: 30px;
