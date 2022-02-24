@@ -39,3 +39,10 @@
     @content;
   }
 }
+
+@mixin retina($r: 2) {
+  $dpi: (96 * $r);
+  @media (min-device-pixel-ratio: $r), (min-resolution: #{$dpi}dpi), (min-resolution: #{$r}dppx) {
+    @content;
+  }
+}

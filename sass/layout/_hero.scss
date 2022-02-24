@@ -18,19 +18,29 @@
 
   text-align: center;
 
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  @include retina() {
     background-image: linear-gradient($hero-overlay-color, $hero-overlay-color),
       url(../images/hero/hero-480@2x.jpg);
+  }
+
+  @include min-media($tablet) {
+    max-width: 768px;
+    background-image: linear-gradient($hero-overlay-color, $hero-overlay-color),
+      url(../images/hero/hero-768.jpg);
+
+    @include retina() {
+      background-image: linear-gradient($hero-overlay-color, $hero-overlay-color),
+        url(../images/hero/hero-768@2x.jpg);
+    }
   }
 }
 
 .hero__title {
-  // width: 360px;
+  max-width: 360px;
   //   width: 696px;
-  // margin-left: auto;
-  // margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
-  padding: 0 45px;
   @include font(26px, 42px, 0.06em, 900);
   //   font-size: 44px;
   text-transform: uppercase;
