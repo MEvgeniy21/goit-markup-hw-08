@@ -1,6 +1,10 @@
 /* общие свойства логотипа */
 .logo {
   @include font(24px, 28px, null, 700, $font-secondary);
+
+  @include min-media($desktop) {
+    @include font(26px, 31px);
+  }
 }
 
 .logo--begin {

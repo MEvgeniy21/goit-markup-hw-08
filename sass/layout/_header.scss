@@ -123,6 +123,11 @@
     margin-right: 88px;
     padding: 26px 0;
   }
+
+  @include min-media($desktop) {
+    margin-right: 93px;
+    padding: 25px 0;
+  }
 }
 
 .header__list {
@@ -133,8 +138,10 @@
     flex-direction: column-reverse;
     margin-bottom: 64px;
   }
-  //   @extend %header-list;
-  //   margin-left: auto;
+
+  @include min-media($desktop) {
+    display: flex;
+  }
 }
 
 .header__item {
@@ -148,22 +155,26 @@
     }
   }
 
-  @include min-media($tablet) {
+  @include media-span($tablet, $desktop) {
     @include font(12px, 14px, 0.02em, 500);
 
     &:not(:first-child) {
       margin-top: 10px;
     }
   }
+
+  @include min-media($desktop) {
+    @include font(14px, 16px, 0.02em, 500);
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
-// .header__item:not(:first-child) {
-//   margin-left: 50px;
-// }
 
 .header__link {
   @include link(inline-block);
   color: inherit;
-  //   @extend %header-link;
   transition: color 250ms $primary-cubic-bezier;
 
   &:hover,
@@ -174,15 +185,23 @@
   @include min-media($tablet) {
     @include flex-position(flex, center, null);
   }
+
+  @include min-media($desktop) {
+    padding: 32px 0;
+  }
 }
 
 .header__icon {
   @include max-media($tablet) {
     display: none;
   }
-  //   margin-right: 10px;
+
   @include min-media($tablet) {
     --color4: currentColor;
     margin-right: 8px;
+  }
+
+  @include min-media($desktop) {
+    margin-right: 10px;
   }
 }

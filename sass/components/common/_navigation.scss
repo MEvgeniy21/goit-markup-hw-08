@@ -1,10 +1,6 @@
-// .navigation {
-//   @include font(40px, 47px, 0.02em, 500);
-// }
-
 .navigation__list {
   @include list();
-  //   @extend %header-list;
+
   @include min-media($tablet) {
     display: flex;
   }
@@ -23,15 +19,9 @@
   }
 }
 
-// .navigation__item:not(:first-child) {
-//   margin-left: 50px;
-// }
-
 .navigation__link {
   @include font(40px, 47px, 0.02em, 500);
   @include link(inline-block);
-  //   @extend %header-link;
-
   color: $title-text-color;
   transition: color 250ms $primary-cubic-bezier;
 
@@ -62,17 +52,3 @@
     }
   }
 }
-
-// .navigation__link--active {
-//   color: $activated-color;
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     left: 0;
-//     bottom: -1px;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: $activated-color;
-//   }
-// }
