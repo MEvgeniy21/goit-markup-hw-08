@@ -5,11 +5,21 @@
 .navigation__list {
   @include list();
   //   @extend %header-list;
+  @include min-media($tablet) {
+    display: flex;
+  }
 }
 
 .navigation__item {
-  &:not(:last-child) {
-    margin-bottom: 32px;
+  @include max-media($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  @include min-media($tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -21,12 +31,35 @@
   @include font(40px, 47px, 0.02em, 500);
   @include link(inline-block);
   //   @extend %header-link;
-  //   position: relative;
+
   color: $title-text-color;
   transition: color 250ms $primary-cubic-bezier;
+
   &:hover,
   &:focus {
     color: $activated-color;
+  }
+
+  @include min-media($tablet) {
+    position: relative;
+    display: block;
+    padding: 32px 0;
+    @include font(14px, 16px);
+
+    &--active {
+      color: $activated-color;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $activated-color;
+      }
+    }
   }
 }
 
