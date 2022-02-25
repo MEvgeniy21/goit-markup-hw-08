@@ -15,7 +15,7 @@
 }
 
 .client__item {
-  width: 210px;
+  width: calc(100% / 2 - 30px);
   margin: 15px;
   color: $icon-color;
   border: 1px solid $icon-color;
@@ -29,14 +29,18 @@
     border-radius: 4px;
   }
 
+  @include min-media($tablet) {
+    width: calc(100% / 3 - 30px);
+  }
+
   @include min-media($desktop) {
-    width: 170px;
+    width: calc(100% / 6 - 30px);
   }
 }
 
 .client__link {
   @include flex-position();
-  height: 92px;
+  height: 90px;
   color: inherit;
 }
 

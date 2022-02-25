@@ -22,12 +22,12 @@
   }
 
   @include min-media($tablet) {
-    max-width: 354px;
+    max-width: calc(100% / 2 - 30px);
     margin: 15px;
   }
 
   @include min-media($desktop) {
-    max-width: 270px;
+    max-width: calc(100% / 4 - 30px);
   }
 }
 
