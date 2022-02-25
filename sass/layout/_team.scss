@@ -6,7 +6,10 @@
 
 .team__title {
   margin-bottom: 30px;
-  // margin-bottom: 50px;
+
+  @include min-media($desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .team .social-list__link {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-07 - Портфолио</title>
+    <title>goit-markup-hw-08 - Портфолио</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,41 +28,99 @@
         <a class="logo header__logo" href="./index.html"
           ><span class="logo--begin">Web</span>Studio</a
         >
-        <!-- Навигация на другие страницы -->
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="./index.html">Студия</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--active" href="./portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- Контакты в шапке -->
-        <ul class="header__list">
-          <li class="header__item">
-            <a class="header__link" href="mailto:info@devstudio.com" aria-label="Электронная почта">
-              <svg class="header__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="tel:+380961111111" aria-label="Телефон">
-              <svg class="header__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-telefon"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <button
+          class="header__btn-menu"
+          type="button"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="header__icon-btn" width="40" height="40">
+            <use class="header__icon-btn--close" href="./images/icons.svg#icon-close_40px"></use>
+            <use class="header__icon-btn--menu" href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+        <div class="header__menu" id="menu-container" data-menu>
+          <!-- Навигация на другие страницы -->
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="./index.html">Студия</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--active" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#address">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__wrap">
+            <ul class="header__list">
+              <li class="header__item">
+                <a
+                  class="header__link"
+                  href="mailto:info@devstudio.com"
+                  aria-label="Электронная почта"
+                >
+                  <svg class="header__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="tel:+380961111111" aria-label="Телефон">
+                  <svg class="header__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-telefon"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://ru.linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Уникальный контент страницы -->
@@ -290,67 +348,93 @@
     <!-- Подвал страницы -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__info">
-          <!-- Логотип -->
-          <a class="logo footer__logo" href="./index.html"
-            ><span class="logo--begin">Web</span>Studio</a
-          >
-          <!-- Контактная информация -->
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
+        <div class="footer__box">
+          <div class="footer__info">
+            <!-- Логотип -->
+            <a class="logo footer__logo" href="./index.html"
+              ><span class="logo--begin">Web</span>Studio</a
+            >
+            <!-- Контактная информация -->
+            <address class="address" id="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    class="address__link address__link--address"
+                    href="https://goo.gl/maps/RLv24xydMvbmv4YP6"
+                    target="_blank"
+                    rel="noreferrer noopener nofollow"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__social">
+            <p class="footer__title font-uppercase">Присоединяйтесь</p>
+            <ul class="social-list">
+              <li class="social-list__item">
                 <a
-                  class="address__link address__link--address"
-                  href="https://goo.gl/maps/RLv24xydMvbmv4YP6"
+                  class="social-list__link"
+                  href="https://www.instagram.com/"
                   target="_blank"
                   rel="noreferrer noopener nofollow"
-                  >г. Киев, пр-т Леси Украинки, 26</a
+                  aria-label="Инстаграм"
                 >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  aria-label="Твиттер"
+                >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  aria-label="Фейсбук"
+                >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href="https://ru.linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  aria-label="Линкедин"
+                >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__social">
-          <p class="footer__title">Присоединяйтесь</p>
-          <ul class="social-list">
-            <li class="social-list__item">
-              <a class="social-list__link" href="https://www.instagram.com/" aria-label="Инстаграм">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="https://twitter.com/" aria-label="Твиттер">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="https://www.facebook.com/" aria-label="Фейсбук">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="https://ru.linkedin.com/" aria-label="Линкедин">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form class="newsletter footer__newsletter">
-          <p class="newsletter__title">Подпишитесь на рассылку</p>
+          <p class="newsletter__title font-uppercase">Подпишитесь на рассылку</p>
           <div class="newsletter__wrap">
             <input
               class="newsletter__input"
@@ -369,5 +453,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

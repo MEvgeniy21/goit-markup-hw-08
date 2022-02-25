@@ -1,43 +1,46 @@
 /* секция галлерея */
-@include max-media($desktop) {
-  .gallery {
+
+.gallery {
+  @include max-media($desktop) {
     display: none;
   }
+
+  @include min-media($desktop) {
+    padding-top: 0;
+  }
 }
-// .gallery {
-//   padding-top: 0;
-// }
 
-// .gallery__title {
-//   margin-bottom: 50px;
-// }
+.gallery__title {
+  @include min-media($desktop) {
+    margin-bottom: 50px;
+  }
+}
 
-// .gallery__list {
-//   @extend %list;
-//   display: flex;
-// }
+.gallery__list {
+  @include min-media($desktop) {
+    @include list(flex);
+  }
+}
 
-// .gallery__item {
-//   position: relative;
-//   &:not(:first-child) {
-//     margin-left: 30px;
-//   }
-// }
+.gallery__item {
+  @include min-media($desktop) {
+    position: relative;
 
-// .gallery__img {
-//   @extend %img;
-// }
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+}
 
-// .gallery__text {
-//   @extend %font-uppercase;
-//   position: absolute;
-//   left: 0;
-//   bottom: 0;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   height: 70px;
-//   color: $primary-color;
-//   background-color: rgba(47, 48, 58, 0.8);
-// }
+.gallery__text {
+  @include min-media($desktop) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include flex-position();
+    width: 100%;
+    height: 70px;
+    color: $primary-color;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

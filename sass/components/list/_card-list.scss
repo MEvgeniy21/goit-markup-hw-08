@@ -1,7 +1,6 @@
 .card-list {
   @include list();
-  //   display: flex;
-  //   margin-left: -30px;
+
   @include min-media($tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +9,6 @@
 }
 
 .card-list__item {
-  //   margin-left: 30px;
   max-width: 450px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -33,11 +31,6 @@
   }
 }
 
-// .card-list__img {
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
 .card-list__title {
   @include font(16px, 19px, null, 500);
   margin-bottom: 10px;
@@ -47,9 +40,10 @@
 .card-list__content {
   padding-top: 30px;
   padding-bottom: 24px;
-  //   padding-bottom: 30px;
-  //   padding-left: 32px;
-  //   padding-right: 32px;
+
+  @include min-media($desktop) {
+    padding-bottom: 30px;
+  }
 }
 
 .card-list__text {

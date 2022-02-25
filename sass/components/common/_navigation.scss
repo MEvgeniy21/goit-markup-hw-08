@@ -25,6 +25,7 @@
   color: $title-text-color;
   transition: color 250ms $primary-cubic-bezier;
 
+  &--active,
   &:hover,
   &:focus {
     color: $activated-color;
@@ -37,8 +38,6 @@
     @include font(14px, 16px);
 
     &--active {
-      color: $activated-color;
-
       &::after {
         content: '';
         position: absolute;

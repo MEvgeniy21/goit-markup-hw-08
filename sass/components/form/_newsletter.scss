@@ -2,9 +2,11 @@
   margin-bottom: 20px;
 }
 
-// .newsletter__wrap {
-//   display: flex;
-// }
+.newsletter__wrap {
+  @include min-media($desktop) {
+    display: flex;
+  }
+}
 
 .newsletter__input {
   max-width: 450px;
@@ -21,19 +23,28 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   transition: border 250ms $primary-cubic-bezier;
+
   &::placeholder {
     color: $contact-text-color;
   }
+
   &:hover,
   &:focus {
     border: 1px solid $activated-color;
+  }
+
+  @include min-media($desktop) {
+    width: 358px;
   }
 }
 
 .newsletter__btn {
   margin-left: auto;
   margin-right: auto;
-  // margin-left: 12px;
+
+  @include min-media($desktop) {
+    margin-left: 12px;
+  }
 }
 
 .newsletter__icon {

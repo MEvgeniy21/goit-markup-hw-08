@@ -1,6 +1,5 @@
 /* контакты в footer */
 .address {
-  // width: 231px;
   font-style: inherit;
 }
 
@@ -12,10 +11,13 @@
   &:not(:last-child) {
     margin-bottom: 8px;
   }
+
+  @include min-media($desktop) {
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
 }
-// .address__item:not(:first-child) {
-//   margin-top: 9px;
-// }
 
 .address__link {
   @include link(null);

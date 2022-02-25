@@ -1,8 +1,10 @@
 /*h2 title */
 .font-title {
   @include font(28px, 33px);
-  // font-size: 36px;
-  // line-height: 1.17;
   text-align: center;
   color: $title-text-color;
+
+  @include min-media($desktop) {
+    @include font(36px, 42px);
+  }
 }
