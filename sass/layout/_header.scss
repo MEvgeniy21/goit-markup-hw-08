@@ -21,10 +21,6 @@
   width: 100%;
   @include flex-position(flex, null, space-between);
 
-  &.is-open {
-    overflow: auto;
-  }
-
   @include max-media($tablet) {
     position: fixed;
     top: 30px;
@@ -34,14 +30,16 @@
     padding: 48px 40px;
     flex-direction: column;
     background-color: $primary-color;
-
+    visibility: hidden;
     transform-origin: top right;
     transform: scale(0) translate(0, 0);
 
-    transition: transform 500ms $primary-cubic-bezier;
+    transition: transform 500ms $primary-cubic-bezier, visibility 500ms $primary-cubic-bezier;
 
     &.is-open {
       transform: scale(1) translate(35px, -30px);
+      visibility: visible;
+      overflow: auto;
     }
 
     & .social-list {
