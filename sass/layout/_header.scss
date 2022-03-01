@@ -155,6 +155,12 @@
     }
   }
 
+  @include max-media($mobile) {
+    &:last-child {
+      font-size: 8vw;
+    }
+  }
+
   @include media-span($tablet, $desktop) {
     @include font(12px, 14px, 0.02em, 500);
 
@@ -184,6 +190,16 @@
 
   @include min-media($tablet) {
     @include flex-position(flex, center, null);
+  }
+
+  @include media-span($tablet, $desktop) {
+    .header__item:first-child & {
+      padding-top: 20px;
+    }
+
+    .header__item:last-child & {
+      padding-bottom: 20px;
+    }
   }
 
   @include min-media($desktop) {
