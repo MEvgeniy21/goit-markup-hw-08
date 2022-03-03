@@ -633,7 +633,6 @@ button {
 }
 
 .project-list__item {
-  display: flex;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   box-shadow: none;
@@ -658,7 +657,10 @@ button {
 }
 
 .project-list__link {
+  display: flex;
   text-decoration: none;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-list__wrap {
@@ -692,6 +694,7 @@ button {
 
 .project-list__content {
   padding: 20px 24px;
+  flex-grow: 1;
 }
 
 .project-list__title {
